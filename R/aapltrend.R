@@ -1,3 +1,7 @@
+#' Apple Stocks trend
+#' 
+#' Press "p" to call fast Apple stocks trend for last 30 days
+#' @return Apple stocks trend updated for last 30 days
 library(plotly)
 
 library(quantmod)
