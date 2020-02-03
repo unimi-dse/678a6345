@@ -1,17 +1,27 @@
-#' Apple Stocks trend
-#' 
-#' Press "p" to call fast Apple stocks trend for last 30 days
-#' @return Apple stocks trend updated for last 30 days
+
 library(plotly)
 
 library(quantmod)
 
-invisible(getSymbols("AAPL",src='yahoo'))
+library(roxygen2)
 
+#'Data Acquisition
+#'
+#' @param x "AAPL" stocks code, "yahoo" data source
+#' @export
+x <- invisible(getSymbols("AAPL",src='yahoo'))
+x
+#'Call the storic trend
+#'
+#'@param 1.df is a comand to call the storic trend of stocks with cod AAPL 
+#'@return all trend storic present in yahoo database order by rows and contains: Date, AAPL.Open, AAPL.High, AAPL Low, AAPL Close, AAPL.Volume, AAPL.Adjusted
+#'@export
 df <- data.frame(Date=index(AAPL),coredata(AAPL))
+
 df <- tail(df, 30)
 df$ID <- seq.int(nrow(df))
 
+#'@param x is the lavels of the stocks by steps
 accumulate_by <- function(dat, var) {
   var <- lazyeval::f_eval(var, dat)
   lvls <- plotly:::getLevels(var)
