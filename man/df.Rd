@@ -4,15 +4,21 @@
 \name{df}
 \alias{df}
 \title{Call the storic trend}
-\format{An object of class \code{data.frame} with 465 rows and 9 columns.}
+\format{An object of class \code{data.frame} with 4095 rows and 9 columns.}
 \usage{
+df
+
 df
 }
 \arguments{
 \item{1.df}{is a comand to call the storic trend of stocks with cod AAPL}
+
+\item{2.df}{order data, filter the last 90 rows}
 }
 \value{
 all trend storic present in yahoo database order by rows and contains: Date, AAPL.Open, AAPL.High, AAPL Low, AAPL Close, AAPL.Volume, AAPL.Adjusted
+
+the trend stocks of last 90 days
 }
 \description{
 Call the storic trend

@@ -1,10 +1,3 @@
-
-library(plotly)
-
-library(quantmod)
-
-library(roxygen2)
-
 #'Data Acquisition
 #'
 #' @param x "AAPL" stocks code, "yahoo" data source
@@ -18,10 +11,24 @@ x
 #'@export
 df <- data.frame(Date=index(AAPL),coredata(AAPL))
 
-df <- tail(df, 30)
+#'@param 2.df order data, filter the last 90 rows
+#'@return the trend stocks of last 90 days
+#'@export
+df <- tail(df, 90)
 df$ID <- seq.int(nrow(df))
 
-#'@param x is the lavels of the stocks by steps
+#'Levels stocks
+#'
+#'@param accumulate_by is the lavels of the stocks by steps
+#'@return function(dat, var) {
+#'var <- lazyeval::f_eval(var, dat)
+#'lvls <- plotly:::getLevels(var)
+#'dats <- lapply(seq_along(lvls), function(x) {
+#'  cbind(dat[var %in% lvls[seq(1, x)], ], frame = lvls[[x]])
+#'})
+#'dplyr::bind_rows(dats)
+#'}
+#'@export
 accumulate_by <- function(dat, var) {
   var <- lazyeval::f_eval(var, dat)
   lvls <- plotly:::getLevels(var)
@@ -34,12 +41,17 @@ accumulate_by <- function(dat, var) {
 df <- df %>%
   accumulate_by(~ID)
 
-p <- ggplot(df,aes(ID, AAPL.Close, frame = frame)) +
+aaplt <- ggplot(df,aes(ID, AAPL.Close, frame = frame)) +
   geom_line()
 
-p <- ggplotly(p) %>%
+#'Run command
+#'
+#'@param aaplt we can see fast the Apple stocks trend in last 90 days (title, axis, animation; you can change parameters to have a different visual, slower/faster animation, different values for axes, ecc...)
+#'@return closing of Apple stocks in the last 90 days; press "Play" to have funny animation of increase or decrease treand
+#'@export
+aaplt <- ggplotly(aaplt) %>%
   layout(
-    title = "AAPL: Last 30 days",
+    title = "AAPL: Last 90 days",
     yaxis = list(
       title = "Close",
       zeroline = F,
@@ -52,7 +64,7 @@ p <- ggplotly(p) %>%
     )
   ) %>%
   animation_opts(
-    frame = 100,
+    frame = 150,
     transition = 0,
     redraw = FALSE
   ) %>%
@@ -62,4 +74,4 @@ p <- ggplotly(p) %>%
     )
   )
 
-p
+aaplt
