@@ -14,3 +14,8 @@ You need to install:
 * library(aapltrend)
 * type "aaplt" to run
 
+# Help
+* ?aaplt
+* ?accumulate_by
+* ?df
+* ?x
