@@ -1,3 +1,7 @@
+library(plotly)
+
+library(quantmod)
+
 #'Data Acquisition
 #'
 #' @param x "AAPL" stocks code, "yahoo" data source
@@ -75,3 +79,4 @@ aaplt <- ggplotly(aaplt) %>%
   )
 
 aaplt
+
