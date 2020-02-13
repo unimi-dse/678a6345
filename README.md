@@ -15,7 +15,7 @@ You need to install:
 * type "aaplt" to run
 
 # Help
-* ?aaplt
-* ?accumulate_by
-* ?df
-* ?x
+* ?data_acquisition
+* ?graph
+* ?last_days
+* ?order_trend
