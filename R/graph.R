@@ -3,6 +3,8 @@
 #' @param aaplt
 #' @return Animation graphic, with "play" bottom; write aaplt to Viewer
 #' @export
+#'
+#' @examples execute create_graph(aaplt) to see the viewer and click "play" to see animation
 create_graph <- function(accumulate_by,aaplt)
 {
 accumulate_by <- function(dat, var) {

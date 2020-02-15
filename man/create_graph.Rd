@@ -12,3 +12,6 @@ Animation graphic, with "play" bottom; write aaplt to Viewer
 \description{
 Graph building
 }
+\examples{
+execute create_graph(aaplt) to see the viewer and click "play" to see animation
+}

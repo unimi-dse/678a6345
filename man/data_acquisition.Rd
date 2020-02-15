@@ -16,5 +16,5 @@ total storic trend of Apple stock (source of data Yahoo Date AAPL.Open AAPL.High
 Data acquisition
 }
 \examples{
-execute print(data_acquisition()) to see the list
+execute data_acquisition() to see the list
 }

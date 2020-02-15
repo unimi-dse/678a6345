@@ -4,7 +4,7 @@
 #' @return last 90 days of storic trend of Apple stock (source of data Yahoo Date AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted)
 #' @export
 #'
-#' @examples execute print(last_days()) to see the list
+#' @examples execute last_days(df) to see the list
 last_days <- function(df)
 {
 df <- tail(df, 90)

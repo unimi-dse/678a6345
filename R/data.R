@@ -4,7 +4,7 @@
 #' @return total storic trend of Apple stock (source of data Yahoo Date AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted)
 #' @export
 #'
-#' @examples execute print(data_acquisition()) to see the list
+#' @examples execute data_acquisition() to see the list
 data_acquisition <- function(df)
 {
 quantmod::getSymbols("AAPL",src='yahoo')

@@ -13,5 +13,5 @@ last 90 days of storic trend of Apple stock (source of data Yahoo Date AAPL.Open
 Last 90 days of trend
 }
 \examples{
-execute print(last_days()) to see the list
+execute last_days(df) to see the list
 }
