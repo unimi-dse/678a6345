@@ -8,6 +8,8 @@ Description: You can see the last 30 days Apple stocks tend.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Depends: quantmod, plotly
+Imports: ggplot2, roxygen2, zoo
 RoxygenNote: 7.0.2
-Imports: ggplot2, quantmod, roxygen2, plotly, zoo
+
 
