@@ -4,7 +4,7 @@ Title: AAPL trend
 Version: 0.1.0
 Author: andbarbat
 Maintainer: andbarbat <yourself@somewhere.net>
-Description: You can see the last 30 days Apple stocks tend.
+Description: You can see the last 90 days Apple stocks tend. [type | data_acquisition(): you can see all storic Apple stocks trend; type | last_days(df): you can see filtered Apple stocks trend of the last 90 days; type | create_graph(aaplt): you can see the graphic with the variation of Apple stocks in the last 90 days.]
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
