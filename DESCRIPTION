@@ -10,6 +10,7 @@ Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.1.0), quantmod, plotly
 Imports: ggplot2, roxygen2, quantmod
+Library: quantmod, plotly
 RoxygenNote: 7.0.2
 
 
