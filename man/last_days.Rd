@@ -6,12 +6,12 @@
 \usage{
 last_days(df)
 }
+\arguments{
+\item{df}{data frame with last 90 rows}
+}
 \value{
 last 90 days of storic trend of Apple stock (source of data Yahoo Date AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted)
 }
 \description{
 Last 90 days of trend
-}
-\examples{
-execute last_days(df) to see the list
 }

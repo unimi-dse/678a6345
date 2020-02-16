@@ -1,11 +1,10 @@
 #' Graph building
-#' @param accumulate_by
-#' @param aaplt
+#' @param accumulate_by  accumulate by var, levels, dats
+#' @param aaplt build of the graphic
+#' @param df data frame accumalte by ID
 #' @return Animation graphic, with "play" bottom; write aaplt to Viewer
 #' @export
-#'
-#' @examples execute create_graph(aaplt) to see the viewer and click "play" to see animation
-create_graph <- function(accumulate_by,aaplt)
+create_graph <- function(accumulate_by, df, aaplt)
 {
 accumulate_by <- function(dat, var) {
   var <- lazyeval::f_eval(var, dat)
@@ -46,8 +45,6 @@ aaplt <- ggplotly(aaplt) %>%
       prefix = "Day "
     )
   )
-
-aaplt
 
 return(aaplt)
 }

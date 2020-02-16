@@ -4,14 +4,18 @@
 \alias{create_graph}
 \title{Graph building}
 \usage{
-create_graph(accumulate_by, aaplt)
+create_graph(accumulate_by, df, aaplt)
+}
+\arguments{
+\item{accumulate_by}{accumulate by var, levels, dats}
+
+\item{df}{data frame accumalte by ID}
+
+\item{aaplt}{build of the graphic}
 }
 \value{
 Animation graphic, with "play" bottom; write aaplt to Viewer
 }
 \description{
 Graph building
-}
-\examples{
-execute create_graph(aaplt) to see the viewer and click "play" to see animation
 }
