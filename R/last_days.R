@@ -5,13 +5,11 @@
 #' @export
 last_days <- function(df)
 {
+quantmod::getSymbols("AAPL",src='yahoo')
+
+df <- data.frame(Date=index(AAPL),coredata(AAPL))
+
 df <- tail(df, 90)
+
 return(df)
 }
-
-order_ID <- function(df,ID)
-{
-df$ID <- seq.int(nrow(df))
-return(df&ID)
-}
-

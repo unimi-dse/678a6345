@@ -6,6 +6,14 @@
 #' @export
 create_graph <- function(accumulate_by, df, aaplt)
 {
+quantmod::getSymbols("AAPL",src='yahoo')
+
+df <- data.frame(Date=index(AAPL),coredata(AAPL))
+
+df <- tail(df, 90)
+
+df$ID <- seq.int(nrow(df))
+
 accumulate_by <- function(dat, var) {
   var <- lazyeval::f_eval(var, dat)
   lvls <- plotly:::getLevels(var)
