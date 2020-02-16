@@ -9,5 +9,5 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Depends: plotly, quantmod, dplyr, lazyeval
-Imports: ggplot2, roxygen2, quantmod 
+Imports: ggplot2, roxygen2, quantmod, digest
 RoxygenNote: 7.0.2
