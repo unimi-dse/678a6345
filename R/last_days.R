@@ -5,9 +5,7 @@
 #' @export
 last_days <- function(df)
 {
-quantmod::getSymbols("AAPL",src='yahoo')
-
-df <- data.frame(Date=index(AAPL),coredata(AAPL))
+aapltrend::data_acquisition(df)
 
 df <- tail(df, 90)
 

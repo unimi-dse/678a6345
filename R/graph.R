@@ -6,11 +6,7 @@
 #' @export
 create_graph <- function(accumulate_by, df, aaplt)
 {
-quantmod::getSymbols("AAPL",src='yahoo')
-
-df <- data.frame(Date=index(AAPL),coredata(AAPL))
-
-df <- tail(df, 90)
+aapltrend::last_days(df)
 
 df$ID <- seq.int(nrow(df))
 
