@@ -6,11 +6,11 @@
 #' @export
 create_graph <- function(accumulate_by, df, aaplt)
 {
-  quantmod::getSymbols("AAPL",src='yahoo')
+quantmod::getSymbols("AAPL",src='yahoo')
 
-  df <- data.frame(Date=index(AAPL),coredata(AAPL))
+df <- data.frame(Date=index(AAPL),coredata(AAPL))
 
-  df <- tail(df, 90)
+df <- tail(df, 90)
 
 df$ID <- seq.int(nrow(df))
 
