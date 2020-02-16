@@ -10,7 +10,7 @@ data_acquisition(df)
 \item{df}{data frame (apple stocks)}
 }
 \value{
-total storic trend of Apple stock (source of data Yahoo Date AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted)
+total storic trend of Apple stock (source of data Yahoo: Date AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted)
 }
 \description{
 Data acquisition

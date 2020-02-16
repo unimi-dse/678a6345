@@ -5,7 +5,7 @@
 #' @export
 last_days <- function(df)
 {
-aapltrend::data_acquisition(df)
+aapltrend::data_acquisition()
 
 df <- tail(df, 90)
 
