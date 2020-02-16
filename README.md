@@ -5,6 +5,8 @@ first install the R package "devtools" if not installed
 
 * devtools::install_github('unimi-dse/678a6345')
 
+!!!NOTE: if you install R first time you can see the error: cannot remove prior installation of package 'digest'; in di case you need install first the package "digest" and after you can install the package "aapltrend" [devtools::install_github('unimi-dse/678a6345')].
+
 # Require
 * library(aapltrend)
 
