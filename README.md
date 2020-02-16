@@ -9,10 +9,9 @@ first install the R package "devtools" if not installed
 * library(aapltrend)
 
 # Usage
-* type | library(aapltrend)
-* type | data_acquisition(): you can see all storic Apple stocks trend
-* type | last_days(df): you can see filtered Apple stocks trend of the last 90 days
-* type | create_graph(aaplt): you can see the graphic with the variation of Apple stocks in the last 90 days 
+* type in the console | data_acquisition(): you can see all storic Apple stocks trend; source of data Yahoo: Date, AAPL.Open, AAPL.High, AAPL.Low, AAPL.Close, AAPL.Volume, AAPL.Adjusted
+* type in the console | last_days(df): you can see filtered Apple stocks trend of the last 90 days
+* type in the console | create_graph(aaplt): you can see the graphic with the variation of Apple stocks in the last 90 days 
 
 # Help
 * ?data_acquisition
