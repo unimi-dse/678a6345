@@ -8,6 +8,6 @@ Description: You can see the last 90 days Apple stocks tend. [type | data_acquis
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends: plotly, quantmod
+Depends: plotly, quantmod, dplyr, lazyeval
 Imports: ggplot2, roxygen2, xts, zoo
 RoxygenNote: 7.0.2
