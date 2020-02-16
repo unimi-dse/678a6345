@@ -1,7 +1,7 @@
 #' Data acquisition
 #'
 #' @param df data frame (apple stocks)
-#' @return total storic trend of Apple stock (source of data Yahoo Date AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted)
+#' @return total storic trend of Apple stock (source of data Yahoo: Date AAPL.Open AAPL.High AAPL.Low AAPL.Close AAPL.Volume AAPL.Adjusted)
 #' @export
 data_acquisition <- function(df)
 {
